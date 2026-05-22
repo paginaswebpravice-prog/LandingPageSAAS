@@ -1,0 +1,318 @@
+/* /components/landing/Hero/Hero.module.css */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #07111f;
+  padding: 120px 0;
+}
+
+.backgroundGlow {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.2);
+  filter: blur(140px);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1400px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  width: fit-content;
+  padding: 10px 18px;
+  margin-bottom: 24px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #93c5fd;
+  font-size: 0.9rem;
+
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  max-width: 760px;
+  margin-bottom: 28px;
+
+  color: #f8fafc;
+
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.description {
+  max-width: 620px;
+  margin-bottom: 40px;
+
+  color: #94a3b8;
+
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  gap: 18px;
+
+  margin-bottom: 50px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  border: none;
+  border-radius: 14px;
+
+  padding: 16px 28px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.primaryBtn {
+  color: white;
+
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-3px);
+}
+
+.secondaryBtn {
+  color: white;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.statCard {
+  min-width: 170px;
+
+  padding: 18px 22px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+.statCard strong {
+  display: block;
+  margin-bottom: 8px;
+
+  color: white;
+  font-size: 1.5rem;
+}
+
+.statCard span {
+  color: #94a3b8;
+  font-size: 0.92rem;
+}
+
+.visual {
+  position: relative;
+}
+
+.dashboard {
+  padding: 28px;
+
+  border-radius: 32px;
+
+  background: rgba(13, 27, 42, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.dashboardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.dashboardHeader p {
+  color: white;
+}
+
+.headerDots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #3b82f6;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.metricCard {
+  padding: 24px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.metricCard span {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #94a3b8;
+}
+
+.metricCard strong {
+  color: white;
+  font-size: 1.7rem;
+}
+
+.pipeline {
+  padding: 24px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pipelineHeader {
+  margin-bottom: 24px;
+}
+
+.pipelineHeader h3 {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.pipelineGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.pipelineColumn {
+  padding: 20px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.pipelineColumn span {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #94a3b8;
+}
+
+.pipelineColumn strong {
+  color: white;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 80px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .metricsGrid,
+  .pipelineGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}
